@@ -1,0 +1,46 @@
+﻿<Window x:Class="SkyboxExport.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SkyboxExport"
+        mc:Ignorable="d"
+        Title="SkyboxExport" Height="1267" Width="1576">
+    <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Height="Auto" MinWidth="400" Margin="10">
+        <GroupBox DockPanel.Dock="Top" Header="Menu" VerticalAlignment="Top" VerticalContentAlignment="Top" Height="Auto">
+            <StackPanel Orientation="Horizontal" Height="35" VerticalAlignment="Top">
+                <Button Content="Import" MinWidth="100" Click="BtnClickImport" />
+                <Button Content="Export" MinWidth="100" Click="BtnClickExport" />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox DockPanel.Dock="Bottom">
+            <UniformGrid Margin="15,15,15,15" Name="uniformGrid1" Rows="3" Columns="4">
+                <Viewbox Stretch="Uniform"/>
+                <Viewbox Stretch="Uniform"/>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageZPos"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform"/>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageYPos"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageXPos"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageYNeg"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageXNeg"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform"/>
+                <Viewbox Stretch="Uniform"/>
+                <Viewbox Stretch="Uniform">
+                    <Image Name="ImageZNeg"/>
+                </Viewbox>
+                <Viewbox Stretch="Uniform"/>
+            </UniformGrid>
+        </GroupBox>
+    </DockPanel>
+</Window>
